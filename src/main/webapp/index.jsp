@@ -58,12 +58,7 @@
             height: 35px;
             border-radius: 10px;
         }
-        /*#lower {
-            background: #ecf2f5;
-            width: 100%;
-            height: 20px;
-            margin-top: 5px;
-        }*/
+        
         input[type=radio] {
             margin-left: 5px;
             margin-top: 5px;
@@ -124,12 +119,12 @@
 <%
     if(request.getParameter("login")!=null)
     {
-        // credential are hardcode
+        
         if(request.getParameter("password")!=""&&request.getParameter("username")!="")
         {
             String uname = request.getParameter("username");
             String pass = request.getParameter("password");
-            if ("kaveesha".equals(uname) && "12345".equals(pass))
+            if ("kaveesha".equals(uname) && "12345".equals(pass)) //credentials are hardcoded
             {
                 String radio =request.getParameter("cookie");
                 if("no".equals(radio))
@@ -141,8 +136,7 @@
                     cook.setPath("/MyLoginPage1");
                     response.addCookie(cook);
                     response.sendRedirect("MyLogin.jsp");
-                /*username.setvalue = "";
-                password.setvalue = "";*/
+                
                 }
                 else if("secure".equals(radio))
                 {
@@ -154,8 +148,7 @@
                     cook.setPath("/MyLoginPage1");
                     response.addCookie(cook);
                     response.sendRedirect("MyLogin.jsp");
-                    /*username.setvalue = "";
-                    password.setvalue = "";*/
+                    
                 }
                 else if("http".equals(radio))
                 {
@@ -167,8 +160,7 @@
                     cook.setPath("/MyLoginPage1");
                     response.addCookie(cook);
                     response.sendRedirect("MyLogin.jsp");
-                    /*username.setvalue = "";
-                    password.setvalue = "";*/
+                    
                 }
                 else if("both".equals(radio))
                 {
@@ -181,8 +173,7 @@
                     cook.setPath("/MyLoginPage1");
                     response.addCookie(cook);
                     response.sendRedirect("MyLogin.jsp");
-                    /*username.setvalue = "";
-                    password.setvalue = "";*/
+                    
                 }
             }
             else
